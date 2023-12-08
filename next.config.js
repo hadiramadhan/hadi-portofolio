@@ -1,6 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
-
-module.exports = nextConfig
+// next.config.js
+module.exports = {
+  // ...
+  exportPathMap: async function () {
+    return {
+      '/': { page: '/' },
+      // tambahkan path halaman lain jika diperlukan
+    };
+  },
+};
